@@ -1,9 +1,21 @@
 ⁌
 ⁍
-◖◗
+◖◗◗
 set -g window-status-current-format "#[bg=gray,fg=black] #I:#W #[default]"
 set -g window-status-current-format "#[bg=gray,fg=black]╭ #I:#W ╮#[default]"
 
+⚫ ◗ ◀ ▶ ► ⬤◗
+⦔ ⦆ ⦊⦒⪢
+# RGB
+RED_BG='\[\e[48;2;255;0;0m\]'
+WHITE_TEXT='\[\e[38;2;255;255;255m\]'
+GREEN_BG='\[\e[48;2;0;255;0m\]'
+BLACK_TEXT='\[\e[38;2;0;0;0m\]'
+YELLOW_BG='\[\e[48;2;255;255;0m\]'
+BLUE_BG='\[\e[48;2;0;0;255m\]'
+MAGENTA_BG='\[\e[48;2;255;0;255m\]'
+CYAN_TEXT='\[\e[38;2;0;255;255m\]'
+RESET='\[\e[0m\]'
 
 # Set foreground colors
 RED='\[\e[31m\]'
