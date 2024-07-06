@@ -39,24 +39,14 @@ BG_WHITE='\[\e[47m\]'
 # Customize PS1 with background colors
 PS1="${BG_BLUE}${WHITE}\u${RESET}${BG_GREEN}${WHITE}@${RESET}${BG_YELLOW}${BLACK}\h${RESET}${BG_RED}${WHITE}:${RESET}${BG_CYAN}${WHITE}\w${RESET} \n${BG_MAGENTA}${WHITE}╭─${RESET}${BG_GREEN}${WHITE}╰─► ${RESET}"
 
-# Set foreground colors
-RED='\[\e[31m\]'
-GREEN='\[\e[32m\]'
-YELLOW='\[\e[33m\]'
-BLUE='\[\e[34m\]'
-MAGENTA='\[\e[35m\]'
-CYAN='\[\e[36m\]'
-WHITE='\[\e[37m\]'
-RESET='\[\e[0m\]'
-
-# Set background colors
-BG_RED='\[\e[41m\]'
-BG_GREEN='\[\e[42m\]'
-BG_YELLOW='\[\e[43m\]'
-BG_BLUE='\[\e[44m\]'
-BG_MAGENTA='\[\e[45m\]'
-BG_CYAN='\[\e[46m\]'
-BG_WHITE='\[\e[47m\]'
-
-# Customize PS1 with background colors
-PS1="${BG_GREEN}${WHITE}\u${RESET}${BG_BLUE}${WHITE}@${RESET}${BG_YELLOW}${WHITE}\h${RESET}${BG_RED}${WHITE}:${RESET}${BG_CYAN}${WHITE}\w${RESET}\n${BG_MAGENTA}${WHITE}╭─${RESET}${BG_GREEN}${WHITE}╰─► ${RESET}"
+awk 'BEGIN{
+    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+    for (colnum = 0; colnum<77; colnum++) {
+        r = 255-(colnum*255/76);
+        g = (colnum*510/76);
+        b = (colnum*255/76);
+        if (g>255) g = 510-g;
+        printf "\033[48;2;%d;%d;%dm\033[38;2;%d;%d;%dm%2d\033[0m", r,g,b, r,g,b, colnum%10;
+    }
+    printf "\n";
+}'
