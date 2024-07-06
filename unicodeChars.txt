@@ -3,3 +3,48 @@
 ◖◗
 set -g window-status-current-format "#[bg=gray,fg=black] #I:#W #[default]"
 set -g window-status-current-format "#[bg=gray,fg=black]╭ #I:#W ╮#[default]"
+
+
+# Set foreground colors
+RED='\[\e[31m\]'
+GREEN='\[\e[32m\]'
+YELLOW='\[\e[33m\]'
+BLUE='\[\e[34m\]'
+MAGENTA='\[\e[35m\]'
+CYAN='\[\e[36m\]'
+WHITE='\[\e[37m\]'
+RESET='\[\e[0m\]'
+
+# Set background colors
+BG_RED='\[\e[41m\]'
+BG_GREEN='\[\e[42m\]'
+BG_YELLOW='\[\e[43m\]'
+BG_BLUE='\[\e[44m\]'
+BG_MAGENTA='\[\e[45m\]'
+BG_CYAN='\[\e[46m\]'
+BG_WHITE='\[\e[47m\]'
+
+# Customize PS1 with background colors
+PS1="${BG_BLUE}${WHITE}\u${RESET}${BG_GREEN}${WHITE}@${RESET}${BG_YELLOW}${BLACK}\h${RESET}${BG_RED}${WHITE}:${RESET}${BG_CYAN}${WHITE}\w${RESET} \n${BG_MAGENTA}${WHITE}╭─${RESET}${BG_GREEN}${WHITE}╰─► ${RESET}"
+
+# Set foreground colors
+RED='\[\e[31m\]'
+GREEN='\[\e[32m\]'
+YELLOW='\[\e[33m\]'
+BLUE='\[\e[34m\]'
+MAGENTA='\[\e[35m\]'
+CYAN='\[\e[36m\]'
+WHITE='\[\e[37m\]'
+RESET='\[\e[0m\]'
+
+# Set background colors
+BG_RED='\[\e[41m\]'
+BG_GREEN='\[\e[42m\]'
+BG_YELLOW='\[\e[43m\]'
+BG_BLUE='\[\e[44m\]'
+BG_MAGENTA='\[\e[45m\]'
+BG_CYAN='\[\e[46m\]'
+BG_WHITE='\[\e[47m\]'
+
+# Customize PS1 with background colors
+PS1="${BG_GREEN}${WHITE}\u${RESET}${BG_BLUE}${WHITE}@${RESET}${BG_YELLOW}${WHITE}\h${RESET}${BG_RED}${WHITE}:${RESET}${BG_CYAN}${WHITE}\w${RESET}\n${BG_MAGENTA}${WHITE}╭─${RESET}${BG_GREEN}${WHITE}╰─► ${RESET}"
