@@ -2,3 +2,4 @@
 ⁍
 ◖◗
 set -g window-status-current-format "#[bg=gray,fg=black] #I:#W #[default]"
+set -g window-status-current-format "#[bg=gray,fg=black]╭ #I:#W ╮#[default]"
